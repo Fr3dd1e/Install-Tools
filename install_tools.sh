@@ -19,12 +19,16 @@ sudo chmod 777 /opt
 
 # FORENSICS / OSINT
 apt install strings binwalk steghide -y
+cd /opt
 git clone https://github.com/sherlock-project/sherlock
 cd sherlock
 python3 -m pip install -r requirements.txt
+
+cd /opt
 git clone https://github.com/Datalux/Osintgram.git
 cd Osintgram
 python3 -m pip install -r requirements.txt
+
 ## Stegseek
 wget https://github.com/RickdeJager/stegseek/releases/download/v0.6/stegseek_0.6-1.deb -O /opt
 dpkg -i /opt/stegseek_0.6-1.deb
