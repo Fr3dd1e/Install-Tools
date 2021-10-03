@@ -18,6 +18,8 @@ apt install ruby -y
 
 apt install ncat -y 
 
+apt install p7zip-full p7zip-rar
+
 sudo chmod 777 /opt
 
 # FORENSICS
@@ -51,6 +53,19 @@ ln -s /opt/ffuf/ffuf /usr/bin/ffuf
 
 ## Burpsuite
 apt install openjdk-8-jre -y
+
+## Gobuster
+wget https://github.com/OJ/gobuster/releases/download/v3.1.0/gobuster-linux-amd64.7z -O /opt/gobuster.7z
+cd /opt
+7z x gobuster.7z
+rm gobuster.7z
+ln -s /opt//opt/gobuster/gobuster-linux-amd64/gobuster /usr/bin/gobuster
+
+# Enum4Linux-ng
+git clone https://github.com/cddmp/enum4linux-ng /opt/enum4linux
+cd /opt/enum4linux
+python3 -m pip install -r requirements.txt
+ln -s /opt/enum4linux/enum4linux-ng.py /usr/bin/enum4linux
 
 # john, hashcat, enum4linux, impacket, sqlmap, ftp, redis-cli
 git clone https://github.com/danielmiessler/SecLists.git /opt/Seclists
