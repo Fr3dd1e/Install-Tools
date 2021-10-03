@@ -1,5 +1,6 @@
 #!/bin/bash
 
+apt install --fix-broken -y
 apt upgrade -y
 apt update -y
 
@@ -18,7 +19,7 @@ apt install ruby -y
 
 apt install ncat -y 
 
-apt install p7zip-full p7zip-rar
+apt install p7zip-full p7zip-rar -y
 
 sudo chmod 777 /opt
 
@@ -27,11 +28,11 @@ apt install strings binwalk steghide -y
 gem install zsteg
 
 ## Stegseek
-wget https://github.com/RickdeJager/stegseek/releases/download/v0.6/stegseek_0.6-1.deb -O /opt
-dpkg -i /opt/stegseek_0.6-1.deb
-rm /opt/stegseek_0.6-1.deb
+wget https://github.com/RickdeJager/stegseek/releases/download/v0.6/stegseek_0.6-1.deb -O /opt/stegseek.deb
+dpkg -i /opt/stegseek.deb
+rm /opt/stegseek.deb
 
-pip install stringcheese
+python3 -m pip install stringcheese
 # todo: stringcheese, stegseek, ghidra
 
 # OSINT
