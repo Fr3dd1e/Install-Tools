@@ -52,4 +52,12 @@ ln -s /opt/ffuf/ffuf /usr/bin/ffuf
 ## Burpsuite
 apt install openjdk-8-jre -y
 
-# john, hashcat, seclists, smbclient, smbmap, enum4linux, impacket, sqlmap, ftp, showmount, redis-cli, sshpass
+# john, hashcat, enum4linux, impacket, sqlmap, ftp, redis-cli
+git clone https://github.com/danielmiessler/SecLists.git /opt/Seclists
+apt install smbclient -y
+apt install smbmap -y
+apt install sshpass -y
+apt install nfs-common -y
+apt install ftp -y
+apt install sqlmap -y
+
