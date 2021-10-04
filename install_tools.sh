@@ -5,6 +5,7 @@ apt upgrade -y
 apt update -y
 
 # MISC
+apt install nmap -y
 apt install tmux -y
 apt install git -y
 apt install vim nano -y
