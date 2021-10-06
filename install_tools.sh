@@ -10,6 +10,7 @@ apt install tmux -y
 apt install git -y
 apt install vim nano -y
 apt install okular eom ghex -y
+apt install john -y
 
 apt install python3 python -y
 apt install python3-pip python-pip -y
